@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login';
 import Fitnessmain from './pages/Fitnessmain';
+import ProtectedRout from './ProtectedRout';
 
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
         <Route path="/fitness" element={<Fitness />} ></Route>
         <Route path="/Signup" element={<Sign />} > </Route>
         <Route path='/Login' element={<Login/>} ></Route>
-        <Route path="/Fitnessmain" element={<Fitnessmain/> }></Route>
+        
+        <Route path="/Fitnessmain" element={<ProtectedRout> 
+          <Fitnessmain/>
+        </ProtectedRout>}></Route>
       </Routes>
     </BrowserRouter>
     </>

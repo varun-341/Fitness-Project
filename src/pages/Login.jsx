@@ -28,7 +28,7 @@ function Login(){
                 alert('User not found')
                 setEmail('')
                 setPassword('')
-            });
+            } );
         }
     }
 
