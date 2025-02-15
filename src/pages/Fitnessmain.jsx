@@ -11,6 +11,11 @@ function Fitnessmain() {
   const[inst, setInstr] = useState([[]])
   const secondCardRefs = useRef([]);
 
+  const key = import.meta.env.VITE_REACT_APP_API_KEY;
+
+  console.log("API KEY "+ key)
+  console.log("API KEY impo "+ import.meta.env)
+
   const [top, setTop] = useState('top: 0')
 
   const fetchData = async() => {
@@ -18,7 +23,7 @@ function Fitnessmain() {
      const response = await fetch('https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=0', {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': '2854a39dfdmsh4d68059c1b754d5p12e366jsnb14af811cd4a',
+        'x-rapidapi-key': key,
         'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
       }
      })
