@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import fit from '../Fitnessmain.module.css'
+import { signOut } from 'firebase/auth'
+import { auth } from "../firebase"
 
 
 function Fitnessmain() {
@@ -12,9 +14,6 @@ function Fitnessmain() {
   const secondCardRefs = useRef([]);
 
   const key = import.meta.env.VITE_REACT_APP_API_KEY;
-
-  console.log("API KEY "+ key)
-  console.log("API KEY impo "+ import.meta.env)
 
   const [top, setTop] = useState('top: 0')
 
@@ -54,10 +53,26 @@ function scrollToTop() {
 };
 
 
+
+
   useEffect(() => {
     fetchData()
   },[]);
 
+ 
+    const handleLougout = async () => {
+      try{
+        await signOut(auth);
+        console.log("User logged out");
+        navigate('/Login');
+      }
+      catch(error) {
+        console.log("Logout error " +error.message)
+      }
+    };
+  
+  
+  
 
   return (
     <>
@@ -66,10 +81,10 @@ function scrollToTop() {
         <div className={fit.bar}>
          <img className={fit.log} onClick={() => navigate("/")} src='src/images/fitlogo.png' width={40} height={40} />
          <div className={fit.butt}>
-         <input className={fit.input} placeholder='Search Workouts' type='text'/> 
+        <h1>Welcome to PowerFit Gym!</h1>
         
          </div> 
-         <img className={fit.log} src='src/images/logout.png' width={40} height={40} />
+         <img className={fit.log} onClick={handleLougout} src='src/images/logout.png' width={40} height={40} />
         </div>
         
         <div className={fit.banner}>
