@@ -1,12 +1,20 @@
- HEAD
-# Fitness-Project
+# PowerFit - Fitness App 💪🔥
 
-# React + Vite
+PowerFit is a modern fitness tracking app built with **React + Vite**. It includes a **BMI Calculator, Workout Tracker, and Firebase Authentication** to help users stay on top of their fitness goals.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features
+- **BMI Calculator** - Track your Body Mass Index easily.
+- **Workout Tracker** - Log and monitor your exercises.
+- **Firebase Authentication** - Secure login system for users.
+- **Fast & Responsive** - Built with Vite for blazing-fast performance.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
+- **React + Vite** - Lightning-fast frontend.
+- **Firebase** - User authentication and data storage.
+- **Tailwind CSS** - Clean and modern UI design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> bea0792 (first commit)
+## 🔥 Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/fitness-app.git
+   cd fitness-app
