@@ -43,9 +43,9 @@ function Fitness() {
   return (
     <>
      <header>
-        <img src='src/images/fitlogo.png' onClick={()=> navigate("/")} id={fitnes.logo} alt='Logo' width={'48px'} height={'48px'} />
+        <img src='Images/fitlogo.png' onClick={()=> navigate("/")} id={fitnes.logo} alt='Logo' width={'48px'} height={'48px'} />
         <h1>"Don’t stop when you’re tired, stop when you’re done."</h1>
-        <img src='src/images/user.png' onClick={()=> navigate("/Signup")} id={fitnes.login} alt='Sign Up' />
+        <img src='Images/user.png' onClick={()=> navigate("/Signup")} id={fitnes.login} alt='Sign Up' />
      </header>
       <div className={fitnes.container}>
         <div className={fitnes.bmi}>

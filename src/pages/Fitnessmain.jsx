@@ -77,14 +77,14 @@ function scrollToTop() {
   return (
     <>
       <div className={fit.page}>
-        <img className={fit.arrow} onClick={scrollToTop()} src='src/images/uparrow.png' width={40} />
+        <img className={fit.arrow} onClick={scrollToTop()} src='Images/uparrow.png' width={40} />
         <div className={fit.bar}>
-         <img className={fit.log} onClick={() => navigate("/")} src='src/images/fitlogo.png' width={40} height={40} />
+         <img className={fit.log} onClick={() => navigate("/")} src='Images/fitlogo.png' width={40} height={40} />
          <div className={fit.butt}>
         <h1>Welcome to PowerFit Gym!</h1>
         
          </div> 
-         <img className={fit.log} onClick={handleLougout} src='src/images/logout.png' width={40} height={40} />
+         <img className={fit.log} onClick={handleLougout} src='Images/logout.png' width={40} height={40} />
         </div>
         
         <div className={fit.banner}>
